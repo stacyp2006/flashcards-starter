@@ -28,7 +28,20 @@ describe('Turn', function() {
   it.skip('should return the users guess', function() {
     const turn = new Turn('object', card);
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    expect(turn.returnGuess()).to.be.a('function');
+    turn.returnGuess();
     expect(turn.returnGuess()).to.equal(turn.userGuess);
   });
+
+  it.skip('should return the current card', function() {
+    const turn = new Turn('object', card);
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+
+    turn.returnCard();
+
+    expect(turn.returnCard()).to.equal(turn.card);
+  });
+
+  
+
+
 }
