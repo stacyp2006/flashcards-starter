@@ -24,4 +24,11 @@ describe('Turn', function() {
     const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     expect(turn.card).to.equal(card);
   });
+
+  it.skip('should return the users guess', function() {
+    const turn = new Turn('object', card);
+    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
+    expect(turn.returnGuess()).to.be.a('function');
+    expect(turn.returnGuess()).to.equal(turn.userGuess);
+  });
 }
