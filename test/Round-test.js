@@ -83,5 +83,14 @@ describe ('Round', function() {
     expect(round.returnCurrentCard()).to.equal(card1.detail);
   });
 
+  it.skip('should instantiate a new Turn when a guess is made', function() {
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    round.takeTurn();
+
+    expect(turn).to.be.an.instanceof(Turn);
+  });
+
   
 })
