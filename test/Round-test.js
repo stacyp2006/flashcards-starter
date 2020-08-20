@@ -111,5 +111,12 @@ describe ('Round', function() {
     expect(round.calculatePercentCorrect()).to.equal(50);
   });
 
-  
+  it.skip('should end the round', function() {
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    round.endRound(50);
+
+    expect(round.endRound).to.equal('‘** Round over! ** You answered 50% of the questions correctly!’');
+  });
 })
