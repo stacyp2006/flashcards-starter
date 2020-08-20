@@ -57,7 +57,7 @@ describe ('Round', function() {
     expect(round.correctGuesses).to.equal(0);
   });
 
-  it.skip('should start round with no incorrect guesses', function() {
+  it('should start round with no incorrect guesses', function() {
     const card1 = new Card();
     const card2 = new Card();
     const card3 = new Card();
