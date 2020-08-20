@@ -27,7 +27,7 @@ describe ('Round', function() {
     expect(round).to.be.an.instanceof(Round);
   });
 
-  it.skip('should start round with a deck of cards', function() {
+  it('should start round with a deck of cards', function() {
     const card1 = new Card();
     const card2 = new Card();
     const card3 = new Card();
