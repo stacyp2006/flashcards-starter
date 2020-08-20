@@ -28,5 +28,12 @@ describe ('Round', function() {
     expect(round.deck).to.deep.equal([card1, card2, card3]);
   });
 
+  it.skip('should start new round with no turns', function() {
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    expect(round.turn).to.equal(0);
+  });
+
   
 })
