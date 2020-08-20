@@ -21,18 +21,25 @@ describe ('Round', function() {
     expect(round).to.be.an.instanceof(Round);
   });
 
-  it.skip('should start a new round with a deck of cards', function() {
+  it.skip('should start round with a deck of cards', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
     expect(round.deck).to.deep.equal([card1, card2, card3]);
   });
 
-  it.skip('should start new round with no turns', function() {
+  it.skip('should start round with no turns', function() {
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
     expect(round.turn).to.equal(0);
+  });
+
+  it.skip('should start round with no correct guesses', function() {
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    expect(round.correctGuesses).to.equal(0);
   });
 
   
