@@ -42,5 +42,12 @@ describe ('Round', function() {
     expect(round.correctGuesses).to.equal(0);
   });
 
+  it.skip('should start round with no incorrect guesses', function() {
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    expect(round.incorrectGuesses).to.deep.equal([]);
+  });
+
   
 })
