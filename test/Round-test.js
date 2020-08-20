@@ -49,5 +49,12 @@ describe ('Round', function() {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
-  
+  it.skip('should count turns', function() {
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    round.takeTurn();
+
+    expect(round.turns).to.equal(1);
+  });
 })
