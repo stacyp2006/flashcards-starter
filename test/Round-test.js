@@ -102,5 +102,14 @@ describe ('Round', function() {
     expect(round.returnCurrentCard()).to.equal(card2.detail);
   });
 
+  it.skip('should calculate the percent correct', function() {
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    round.calculatePercentCorrect(5, 10);
+
+    expect(round.calculatePercentCorrect()).to.equal(50);
+  });
+
   
 })
