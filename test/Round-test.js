@@ -37,17 +37,17 @@ describe ('Round', function() {
     expect(round.deck).to.deep.equal([card1, card2, card3]);
   });
 
-  it.skip('should start round with no turns', function() {
+  it('should start round with no turns', function() {
     const card1 = new Card();
     const card2 = new Card();
     const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
-    expect(round.turn).to.equal(0);
+    expect(round.turns).to.equal(0);
   });
 
-  it.skip('should start round with no correct guesses', function() {
+  it('should start round with no correct guesses', function() {
     const card1 = new Card();
     const card2 = new Card();
     const card3 = new Card();
