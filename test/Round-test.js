@@ -92,5 +92,15 @@ describe ('Round', function() {
     expect(turn).to.be.an.instanceof(Turn);
   });
 
+  it.skip('should make the next card the current card', function() {
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    round.takeTurn();
+    round.returnCurrentCard();
+
+    expect(round.returnCurrentCard()).to.equal(card2.detail);
+  });
+
   
 })
