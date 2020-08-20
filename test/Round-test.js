@@ -7,14 +7,20 @@ const Turn = require('../src/Turn');
 const Round = require('../src/Round');
 
 describe ('Round', function() {
-  it.skip('should be a function', function() {
+  it('should be a function', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
     expect(Round).to.be.a('function');
   });
 
-  it.skip('should be an instance of Round', function() {
+  it('should be an instance of Round', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -22,6 +28,9 @@ describe ('Round', function() {
   });
 
   it.skip('should start round with a deck of cards', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -29,6 +38,9 @@ describe ('Round', function() {
   });
 
   it.skip('should start round with no turns', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -36,6 +48,9 @@ describe ('Round', function() {
   });
 
   it.skip('should start round with no correct guesses', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -43,6 +58,9 @@ describe ('Round', function() {
   });
 
   it.skip('should start round with no incorrect guesses', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -50,6 +68,9 @@ describe ('Round', function() {
   });
 
   it.skip('should count turns', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -59,6 +80,9 @@ describe ('Round', function() {
   });
 
   it.skip('should record a correct guess', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -67,6 +91,9 @@ describe ('Round', function() {
   });
 
   it.skip('should record an incorrect guess', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -75,6 +102,9 @@ describe ('Round', function() {
   });
 
   it.skip('should return the current card being played', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -84,6 +114,9 @@ describe ('Round', function() {
   });
 
   it.skip('should instantiate a new Turn when a guess is made', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -93,6 +126,9 @@ describe ('Round', function() {
   });
 
   it.skip('should make the next card the current card', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -103,6 +139,9 @@ describe ('Round', function() {
   });
 
   it.skip('should calculate the percent correct', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
@@ -112,11 +151,14 @@ describe ('Round', function() {
   });
 
   it.skip('should end the round', function() {
+    const card1 = new Card();
+    const card2 = new Card();
+    const card3 = new Card();
     const deck = new Deck([card1, card2, card3]);
     const round = new Round(deck);
 
     round.endRound(50);
 
-    expect(round.endRound).to.equal('‘** Round over! ** You answered 50% of the questions correctly!’');
+    expect(round.endRound).to.equal('** Round over! ** You answered 50% of the questions correctly!');
   });
 })
