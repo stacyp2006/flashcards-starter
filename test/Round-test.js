@@ -73,4 +73,15 @@ describe ('Round', function() {
     round.takeTurn();
     expect(round.incorrectGuesses).to.deep.equal([card.id]);
   });
+
+  it.skip('should return the current card being played', function() {
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    round.returnCurrentCard();
+
+    expect(round.returnCurrentCard()).to.equal(card1.detail);
+  });
+
+  
 })
