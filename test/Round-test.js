@@ -66,5 +66,11 @@ describe ('Round', function() {
     expect(round.correctGuesses).to.equal(1);
   });
 
-  
+  it.skip('should record an incorrect guess', function() {
+    const deck = new Deck([card1, card2, card3]);
+    const round = new Round(deck);
+
+    round.takeTurn();
+    expect(round.incorrectGuesses).to.deep.equal([card.id]);
+  });
 })
