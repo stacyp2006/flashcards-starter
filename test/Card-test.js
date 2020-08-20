@@ -4,14 +4,17 @@ const expect = chai.expect;
 const Card = require('../src/Card');
 
 describe('Card', function() {
-
+  let card;
+  beforeEach((done) => {
+    card = new Card();
+    done();
+  })
   it('should be a function', function() {
-    const card = new Card();
     expect(Card).to.be.a('function');
   });
 
   it('should be an instance of Card', function() {
-    const card = new Card();
+
     expect(card).to.be.an.instanceof(Card);
   });
 
