@@ -67,7 +67,7 @@ describe ('Round', function() {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
-  it.skip('should count turns', function() {
+  it('should count turns', function() {
     const card1 = new Card();
     const card2 = new Card();
     const card3 = new Card();
