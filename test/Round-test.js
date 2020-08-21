@@ -9,9 +9,9 @@ const Round = require('../src/Round');
 describe ('Round', function() {
   let round;
   beforeEach((done) => {
-    card1 = new Card();
-    card2 = new Card();
-    card3 = new Card();
+    card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
+    card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
     deck = new Deck([card1, card2, card3]);
     round = new Round(deck);
     done();
@@ -41,14 +41,9 @@ describe ('Round', function() {
     expect(round.incorrectGuesses).to.deep.equal([]);
   });
 
-  it.skip('should count turns', () => {
-    round.takeTurn(guess);
+  it('should count turns', () => {
+    round.takeTurn('object');
     expect(round.turns).to.equal(1);
-  });
-
-  it('should instantiate a new Turn when a guess is made', () => {
-    round.takeTurn();
-    expect(turn).to.be.an.instanceof(Turn);
   });
 
   it.skip('should record a correct guess', () => {
@@ -61,17 +56,14 @@ describe ('Round', function() {
     expect(round.incorrectGuesses).to.deep.equal([card.id]);
   });
 
-  it.skip('should return the current card being played', () => {
+  it('should return the current card being played', () => {
     round.returnCurrentCard();
-
-    expect(round.returnCurrentCard()).to.equal(card1.detail);
+    expect(round.returnCurrentCard()).to.equal({ id: 1, question: 'What is Robbie\'s favorite animal', answers: ['sea otter', 'pug', 'capybara'], correctAnswer: 'sea otter'});
   });
 
   it.skip('should make the next card the current card', () => {
     round.takeTurn(guess);
-    round.returnCurrentCard();
-
-    expect(round.returnCurrentCard()).to.equal(card2.detail);
+    expect(round.returnCurrentCard()).to.equal(card2);
   });
 
   it.skip('should calculate the percent correct', () => {
